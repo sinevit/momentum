@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="audio">
+      <div class="player">
+        <audio class="audioplayer" src=""></audio>
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        
+      </div>
+      <div class="player-panel">
+        <div class="player-timepanel">
+          <div>
+            <button class="volume">
+            </button>
+            <input type="range" class="progress-volume" value="50" min="0" max="100" step="10">
+          </div>
+          <p class="play-name">Aqua Caelestis</p>
+          <div>
+            
+            <input type="range" class="progress-time" value="0" min="0" max="100">
+            <div class="span-time">
+              <span class="songs-time">00:00</span>
+              <span class="songs-duration"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" value="Minsk"/>
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+        <span class="wind"></span>
+        <span class="humidity"></span>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting">
+      <span class="greetings"></span>
+      <input type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <button class="change-quote"></button>
+    <div class="quote">
+      <div class="quote-text"></div>
+      <div class="author"></div>
+    </div>
+    <div class="player-icon settings-icon"></div>
+    <div class="settings-menu">
+      <div class="setting">
+        <div class="set">
+          <span class=" title language_title">Language</span>
+          <div>
+            <button class="lan-icon en active">EN</button>
+            <button class="lan-icon ru">RU</button>
+          </div>
+        </div>
+        <div class="set">
+          <span class="title time_title">Time</span>
+          <label class="switch">
+            <input type="checkbox" id='time' checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="set">
+          <span class="title date_title" >Date</span>
+          <label class="switch">
+            <input type="checkbox" id='date' checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="set">
+          <span class=" title greeting_title">Greeting</span>
+          <label class="switch">
+            <input type="checkbox" id='greeting' checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="set">
+          <span class=" title quote_title">Quote</span>
+          <label class="switch">
+            <input type="checkbox" id='quote' checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="set">
+          <span class=" title weather_title">Weather</span>
+          <label class="switch">
+            <input type="checkbox" id='weather' checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="set">
+          <span class=" title audio_title">Audio</span>
+          <label class="switch">
+            <input type="checkbox" id='audio' checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="set">
+          <span class=" title todo_title">TODO</span>
+          <label class="switch">
+            <input type="checkbox" id='todo' checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="set">
+          <span class=" tiplayer-icontle photo_title">PhotoSource</span>
+          <select id="select-1" class="set-select" name="PhotoSource">
+            <option class="set-options" value="GitHub">GitHub</option>
+            <option class="set-options" value="UnsplashAPI">Unsplash API</option>
+            <option class="set-options" value="FlickrAPI">Flickr API</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="todo player-icon todo-icon"></div>
+    <div class="todo TODO">
+      <div class="todo-wrapper">
+        <span class=" title todo-title">TO DO LIST:</span>
+        <div class="todo-list">
+          <ul class="todo-items"></ul>
+        </div>
+        <div class="todo-input">
+          <input class="todo-text" type="text">
+          <span onclick="addNewTODOItem()" class="todo-add"></span>
+        </div>
+      </div> 
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
